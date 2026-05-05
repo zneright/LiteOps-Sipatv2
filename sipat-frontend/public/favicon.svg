@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="targetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#818cf8" />
+      <stop offset="100%" stopColor="#4f46e5" />
+    </linearGradient>
+    <filter id="planeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring (Dark Slate) -->
+  <circle cx="40" cy="60" r="28" stroke="#1e293b" stroke-width="10" />
+  
+  <!-- Inner Target Core -->
+  <circle cx="40" cy="60" r="12" fill="url(#targetGradient)" />
+
+  <!-- Paper Airplane -->
+  <g filter="url(#planeShadow)">
+    <path d="M35 65 L95 15 L60 85 L45 60 Z" fill="#6366f1" />
+    <path d="M95 15 L45 60 L35 45 Z" fill="#a5b4fc" />
+  </g>
+</svg>
