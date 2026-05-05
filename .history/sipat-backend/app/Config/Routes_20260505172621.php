@@ -1,0 +1,10 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
+$routes->post('users', 'Api\UserController::create');
+$routes->post('users', 'Api\UserController::options');
