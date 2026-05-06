@@ -1,0 +1,58 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
+$routes->group('api', ['namespace' => 'App\Controllers'], function($routes) {
+    $routes->options('users', 'UserController::create'); 
+    $routes->post('users', 'UserController::create'); 
+    $routes->get('users', 'UserController::index'); 
+
+    $routes->options('projects', 'ProjectController::create');
+    $routes->post('projects', 'ProjectController::create');
+    $routes->get('projects', 'ProjectController::index'); 
+    
+    $routes->options('projects/(:num)', 'ProjectController::update/$1'); 
+    $routes->put('projects/(:num)', 'ProjectController::update/$1');
+    $routes->options('projects/(:num)', 'ProjectController::show/$1');
+    $routes->get('projects/(:num)', 'ProjectController::show/$1'); 
+    
+    // 🚀 NEW: Project Reactions Preflight & Route
+    $routes->options('projects/(:num)/react', 'ProjectController::react/$1');
+    $routes->put('projects/(:num)/react', 'ProjectController::react/$1');
+
+    $routes->options('comments', 'CommentController::create');
+    $routes->post('comments', 'CommentController::create'); 
+    $routes->get('comments/(:num)', 'CommentController::index/$1'); 
+    
+    // 🚀 FIX: Added the missing OPTIONS route so CORS doesn't block reactions!
+    $routes->options('comments/(:num)/react', 'CommentController::react/$1');
+    $routes->put('comments/(:num)/react', 'CommentController::react/$1'); 
+});
+
+    // Catch the browser's CORS preflight security check
+    $routes->options('users', 'UserController::create'); 
+    
+    // Catch the actual React POST request (Sign Up)
+    $routes->post('users', 'UserController::create'); 
+
+    // NEW: Catch GET requests (To view all users)
+    $routes->get('users', 'UserController::index'); 
+$routes->options('projects', 'ProjectController::create');
+    $routes->post('projects', 'ProjectController::create');
+    $routes->get('projects', 'ProjectController::index'); // 🚀 Fetch Projects
+    
+    $routes->options('projects/(:num)', 'ProjectController::update/$1'); 
+    $routes->put('projects/(:num)', 'ProjectController::update/$1');
+    $routes->options('projects/(:num)', 'ProjectController::show/$1');
+$routes->get('projects/(:num)', 'ProjectController::show/$1'); // Fetch Single Project
+
+$routes->options('comments', 'CommentController::create');
+$routes->post('comments', 'CommentController::create'); // Post Comment
+$routes->get('comments/(:num)', 'CommentController::index/$1'); // Get Comments for Project
+$routes->put('comments/(:num)/react', 'CommentController::react/$1'); // Handle Likes
+
+});
