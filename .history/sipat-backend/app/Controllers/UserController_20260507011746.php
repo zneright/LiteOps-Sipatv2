@@ -1,0 +1,165 @@
+<?php
+namespace App\Controllers;
+
+use App\Controllers\BaseController;
+use CodeIgniter\API\ResponseTrait;
+
+class UserController extends BaseController
+{
+    use ResponseTrait;
+
+    public function create()
+    {
+        // 1. Hardcore CORS Headers
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+        header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+        
+        if ($this->request->getMethod(true) === 'OPTIONS') {
+            return $this->response->setStatusCode(200);
+        }
+
+        $json = $this->request->getJSON();
+        if (!$json) return $this->fail('No JSON data provided', 400);
+
+        // 2. CRASH-CATCHER BLOCK
+        try {
+            $db = \Config\Database::connect();
+            $builder = $db->table('users');
+            
+            $data = [
+                'firebase_uid'      => $json->firebase_uid,
+                'email'             => $json->email,
+                'full_name'         => $json->full_name,
+                'role'              => $json->role,
+                'organization_name' => $json->organization_name,
+                'is_approved'       => $json->is_approved,
+                'created_at'        => date('Y-m-d H:i:s')
+            ];
+
+            if ($builder->insert($data)) {
+                return $this->respondCreated(['status' => 201, 'message' => 'User saved to DB']);
+            }
+
+            return $this->failServerError('Failed to save user.');
+
+        } catch (\Exception $e) {
+            // IF MYSQL CRASHES, IT WILL SEND THE EXACT ERROR TO REACT
+            return $this->failServerError('DB Error: ' . $e->getMessage());
+        }
+    }
+
+    public function index()
+    {
+        header('Access-Control-Allow-Origin: *');
+        try {
+            $db = \Config\Database::connect();
+            $builder = $db->table('users');
+            
+            $uid = $this->request->getVar('firebase_uid');
+            if ($uid) {
+                $builder->where('firebase_uid', $uid);
+            }
+
+            // 🚀 THE FIX: Allow React to search by email!
+            $email = $this->request->getVar('email');
+            if ($email) {
+                $builder->where('email', $email);
+            }
+
+            $users = $builder->orderBy('created_at', 'DESC')->get()->getResultArray();
+            return $this->respond($users);
+            
+        } catch (\Exception $e) {
+            return $this->failServerError('DB Error: ' . $e->getMessage());
+        }
+    }
+    // 🚀 NEW: Update user profile details
+    public function update($firebase_uid = null)
+    {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+        header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+
+        if ($this->request->getMethod(true) === 'OPTIONS') {
+            return $this->response->setStatusCode(200);
+        }
+
+        $json = $this->request->getJSON();
+        if (!$json) return $this->fail('No JSON data provided', 400);
+
+        try {
+            $db = \Config\Database::connect();
+            $builder = $db->table('users');
+            
+            // Look up the user by their Firebase UID
+            $builder->where('firebase_uid', $firebase_uid);
+            
+            $data = [
+                'organization_name' => $json->organization_name ?? null, // 🚀 NOW IT SAVES!
+                'email'             => $json->contact_email ?? null,     // 🚀 NOW IT SAVES!
+                'location'          => $json->location ?? null,
+                'bio'               => $json->bio ?? null,
+            ];
+
+            if ($builder->update($data)) {
+                return $this->respond(['status' => 200, 'message' => 'Profile updated successfully']);
+            }
+
+            return $this->failServerError('Failed to update profile.');
+
+        } catch (\Exception $e) {
+            return $this->failServerError('DB Error: ' . $e->getMessage());
+        }
+    }
+    // 🚀 NEW: Get Saved Projects
+    public function getSavedProjects() {
+        header('Access-Control-Allow-Origin: *');
+        $email = $this->request->getVar('email');
+        if (!$email) return $this->fail('Missing email');
+
+        $db = \Config\Database::connect();
+        $user = $db->table('users')->where('email', $email)->get()->getRowArray();
+        
+        $saved = [];
+        if ($user && $user['saved_projects']) {
+            $saved = json_decode($user['saved_projects'], true);
+        }
+        
+        return $this->respond(['saved_projects' => is_array($saved) ? $saved : []]);
+    }
+
+    // 🚀 NEW: Toggle Save/Follow Project
+    public function toggleSaveProject() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+        header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+        if ($this->request->getMethod(true) === 'OPTIONS') return $this->response->setStatusCode(200);
+
+        $json = $this->request->getJSON();
+        $email = $json->email ?? null;
+        $projectId = $json->project_id ?? null;
+
+        if (!$email || !$projectId) return $this->fail('Missing data');
+
+        $db = \Config\Database::connect();
+        $user = $db->table('users')->where('email', $email)->get()->getRowArray();
+        if (!$user) return $this->fail('User not found');
+
+        $saved = $user['saved_projects'] ? json_decode($user['saved_projects'], true) : [];
+        if (!is_array($saved)) $saved = [];
+
+        // Toggle Logic
+        if (in_array($projectId, $saved)) {
+            $saved = array_values(array_diff($saved, [$projectId])); // Remove
+            $status = 'removed';
+        } else {
+            $saved[] = $projectId; // Add
+            $status = 'added';
+        }
+
+        $db->table('users')->where('email', $email)->update(['saved_projects' => json_encode($saved)]);
+
+        return $this->respond(['status' => 200, 'action' => $status, 'saved_projects' => $saved]);
+    }
+}
