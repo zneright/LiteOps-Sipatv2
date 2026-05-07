@@ -265,18 +265,6 @@ Sipat directly addresses three interconnected civic problems:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! If you have ideas for new features, data sources to integrate, or design improvements, feel free to open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature-name`)
-3. Commit your changes (`git commit -m 'Add: your feature description'`)
-4. Push to the branch (`git push origin feature/your-feature-name`)
-5. Open a Pull Request
-
----
-
 <div align="center">
 
 Built with ❤️ for DevKada Hackaton 2026.
