@@ -30,7 +30,7 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 
 <br/>
 
-### 🔗 [Live Demo → lite-ops-sipatv2-idwe.vercel.app](https://lite-ops-sipatv2-idwe.vercel.app/login)
+### 🔗 [Live Demo → lite-ops-sipatv2-idwe.vercel.app](https://lite-ops-sipatv2-idwe.vercel.app)
 
 > Deployed on Vercel. No install required — just open and explore.
 
