@@ -45,7 +45,7 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 
 Apathy and corruption thrive in the dark.
 
-Municipal data — where your taxes go, what projects are planned in your neighborhood, how contracts are awarded — is routinely buried in dense PDFs, unstyled government portals, or not published at all. Citizens are left disengaged, uninformed, and unable to hold officials accountable.
+Municipal data — where your taxes go, what projects are planned in your neighborhood, how contracts are awarded is routinely buried in dense PDFs, unstyled government portals, or not published at all. Citizens are left disengaged, uninformed, and unable to hold officials accountable.
 
 **Sipat changes that.** By treating the citizen as a premium user, we make civic engagement not just accessible, but genuinely desirable.
 
@@ -100,6 +100,8 @@ Sipat was built with a relentless focus on UX/UI, deliberately breaking away fro
 | **Backend** | PHP (routing, database, API logic) |
 | **AI / ML** | Google AI & Gemini (municipal data processing + accessible summaries) |
 | **Auth & DB** | Firebase |
+| **File & Media Storage** | Cloudinary (image and file uploads via PHP backend) |
+
 
 ---
 
