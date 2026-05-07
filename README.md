@@ -9,14 +9,13 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 
 <br/>
 
-<br/>
-
 **Frontend**
 
 [![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript_5-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite_5-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 **Backend**
 
@@ -28,8 +27,6 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 
 [![Google AI](https://img.shields.io/badge/Google_AI-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google/)
 [![Gemini](https://img.shields.io/badge/Gemini_1.5-8E75B2?style=flat-square&logo=googlebard&logoColor=white)](https://deepmind.google/technologies/gemini/)
-
-<br/>
 
 <br/>
 
@@ -46,8 +43,13 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 - [The Problem](#-the-problem)
 - [Screenshots](#-screenshots)
 - [Core Features](#-core-features)
+  - [AI-Powered Intelligence](#-ai-powered-intelligence--luminos-engine)
+  - [Citizen Portal](#-citizen-portal)
+  - [Agency Command Center](#-agency-command-center)
+  - [Super Admin Console](#️-super-admin-console)
+  - [Platform-Wide Technical Features](#️-platform-wide-technical-features)
 - [Design Philosophy](#-design-philosophy)
-- [Tech Stack](#-tech-stack)
+- [Tech Stack](#️-tech-stack)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
 - [Social Impact](#-social-impact)
@@ -59,7 +61,7 @@ Sipat bridges the gap between local government data and everyday citizens — tr
 
 Apathy and corruption thrive in the dark.
 
-Municipal data — where your taxes go, what projects are planned in your neighborhood, how contracts are awarded is routinely buried in dense PDFs, unstyled government portals, or not published at all. Citizens are left disengaged, uninformed, and unable to hold officials accountable.
+Municipal data — where your taxes go, what projects are planned in your neighborhood, how contracts are awarded — is routinely buried in dense PDFs, unstyled government portals, or not published at all. Citizens are left disengaged, uninformed, and unable to hold officials accountable.
 
 **Sipat changes that.** By treating the citizen as a premium user, we make civic engagement not just accessible, but genuinely desirable.
 
@@ -82,13 +84,64 @@ Municipal data — where your taxes go, what projects are planned in your neighb
 
 ## ✨ Core Features
 
+### 🧠 AI-Powered Intelligence — *LuminOS Engine*
+
+Powered by Google Gemini, the LuminOS engine acts as Sipat's core transparency layer — automating audits and validating civic data so citizens don't have to take anyone's word for it.
+
+| Capability | Description |
+|---|---|
+| 📄 **Smart Document Parsing** | Automatically extracts budget, timeline, category, and construction phases from uploaded agency PDFs and images. |
+| 🔍 **Automated Evidence Auditing** | Analyzes citizen-submitted proof (photos + text) and generates a **Match Score (0–100%)** measuring how accurately it reflects official project data. |
+| 🚨 **Ghost Project Detection** | Scans community feedback and visual evidence to flag abandoned, fraudulent, or heavily delayed projects with a **🚨 GHOST FLAG**. |
+| 🔎 **Semantic Search** | Goes beyond keyword matching — understands the *context* of a citizen's query to surface relevant projects, agencies, and documents. |
+
+---
+
+### 👤 Citizen Portal
+
+Designed to turn passive residents into active civic participants through auditing, engagement, and gamified accountability.
+
 | Feature | Description |
 |---|---|
-| 🗺️ **Community Explorer** | Discover local initiatives and infrastructure plans mapped accurately to your district and neighborhood. |
-| 🛡️ **Verified Reports** | Access citizen-audited reports on public spending, contract allocations, and local budgets. |
-| 📈 **Live Project Tracker** | Monitor construction milestones, timelines, and real-time budget utilization through an interactive visual dashboard. |
-| 👥 **Citizen Dashboard** | A personalized feed of town halls, public polls, and vital updates relevant to your area. |
-| 🤖 **AI-Powered Summaries** | Complex municipal data translated into plain language by Google Gemini — no policy degree required. |
+| 📰 **Personalized Commits Feed** | Browse **Trending**, **Recent**, or a **Following** feed aggregating updates from saved agencies and projects. |
+| 🕵️ **Active Auditing** | Submit visual and textual proof to update a project's phase status — with full **anonymous submission** support to protect identity. |
+| 💬 **Reaction Ecosystem** | Lightweight sentiment system to react to project updates: 👍 Valid · 😐 Neutral · 👎 Flagged. |
+| 🏆 **Trophy Matrix** | A leveling system that rewards validated civic engagement. Ranks: **Newcomer 🌱 → Civic Watchman 🛡️ → Lead Verifier 🥇 → Supreme Oracle 👑** |
+
+---
+
+### 🏛️ Agency Command Center
+
+A dedicated workspace for Local Government Units (LGUs) to manage infrastructure portfolios and maintain public trust.
+
+| Feature | Description |
+|---|---|
+| 📊 **Global Analytics Dashboard** | Real-time metrics: total projects, citizen approval ratings, completion rates, and a calculated **Transparency Score**. |
+| 🏗️ **Dynamic Project Management** | Track phase-by-phase progress, manually verify completed milestones, and upload official photo proof. |
+| 🔔 **Direct Feedback Monitoring** | Review citizen-submitted evidence, monitor AI trust scores, and identify **Critical Ghost Flags** requiring immediate action. |
+| 🪪 **Public Identity & Mandate** | A public-facing agency profile with official mandate, contact details, and earned trust badges (e.g., *Gold Standard Agency*, *Needs Improvement*). |
+
+---
+
+### ⚙️ Super Admin Console
+
+Root-level infrastructure for platform health monitoring and community moderation.
+
+| Feature | Description |
+|---|---|
+| 🌐 **Global Oversight** | High-level tracking of active citizens, registered agencies, global saves, and total AI verifications across the ecosystem. |
+| 👥 **User Management** | Monitor account creation, assign trust badges, and instantly activate or deactivate citizen or agency accounts. |
+| 📋 **System Audit Logs** | A rigorous security ledger tracking every major action — logins, searches, registrations, and project creations. |
+| 📥 **PDF Report Generation** | Generate and download formatted, localized audit reports with custom branding directly from the platform. |
+
+---
+
+### 🛠️ Platform-Wide Technical Features
+
+- **Role-Based Access Control (RBAC)** — Strict routing and UI rendering based on user role: citizen, agency, or admin.
+- **Frictionless Authentication** — Google OAuth + Email/Password login, each mapping directly to a specific platform role.
+- **Fluid UI/UX** — Fully responsive layout with dark/light mode toggling and rich micro-interactions powered by **Framer Motion**.
+- **Cloud Storage** — Direct uploads to **Cloudinary** for agency documents and citizen photo evidence.
 
 ---
 
@@ -110,12 +163,12 @@ Sipat was built with a relentless focus on UX/UI, deliberately breaking away fro
 |---|---|
 | **Frontend Framework** | React + TypeScript |
 | **Styling** | Tailwind CSS v4 (custom keyframes, arbitrary values, background masking) |
+| **Animations** | Framer Motion (loading states, tab switching, modal transitions) |
 | **Build Tool** | Vite (HMR + optimized production builds) |
 | **Backend** | PHP (routing, database, API logic) |
 | **AI / ML** | Google AI & Gemini (municipal data processing + accessible summaries) |
 | **Auth & DB** | Firebase |
 | **File & Media Storage** | Cloudinary (image and file uploads via PHP backend) |
-
 
 ---
 
@@ -163,6 +216,7 @@ composer install
 # Just rename it to '.env' before running the server.
 cp .env.txt .env
 # → Your credentials are already inside — no need to fill anything in manually.
+# → Includes your CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_API_SECRET for file and image uploads.
 ```
 
 ### 2. Frontend Setup (React + Vite)
@@ -211,11 +265,21 @@ Sipat directly addresses three interconnected civic problems:
 
 ---
 
+## 🤝 Contributing
 
+Contributions are welcome! If you have ideas for new features, data sources to integrate, or design improvements, feel free to open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature-name`)
+3. Commit your changes (`git commit -m 'Add: your feature description'`)
+4. Push to the branch (`git push origin feature/your-feature-name`)
+5. Open a Pull Request
+
+---
 
 <div align="center">
 
-Built with ❤️ for DevKada Hackathon 2026.
+Built with ❤️ for DevKada Hackaton 2026.
 
 *Sipat — See Your Community Clearly.*
 
