@@ -1,6 +1,6 @@
 <div align="center">
 
-# ![Citizen Mobile View](sipat-frontend/public/favicon.svg) Sipat
+# <img src="sipat-frontend/public/favicon.svg" alt="svg" width="40"> Sipat
 ### *See Your Community Clearly.*
 
 **The modern civic-tech platform empowering citizens through radical transparency.**
