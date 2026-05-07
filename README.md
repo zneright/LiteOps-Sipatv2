@@ -199,7 +199,7 @@ Sipat directly addresses three interconnected civic problems:
 
 <div align="center">
 
-Built with ❤️ for communities everywhere.
+Built with ❤️ for DevKada Hackathon 2026.
 
 *Sipat — See Your Community Clearly.*
 
