@@ -71,32 +71,60 @@ Municipal data — where your taxes go, what projects are planned in your neighb
 > Sipat supports **dark mode** out of the box and is fully optimized for **mobile access** — so citizens can check on their community anytime, anywhere.
 
 ### 🔐 Authentication
-<!-- Note: Citizen Sign Up is sized as a mobile view -->
-<img src="sipat-frontend/public/login.png" alt="Login" width="500">
-<img src="sipat-frontend/public/agencysignup.png" alt="Agency Sign Up" width="500">
-<img src="sipat-frontend/public/citizen%20sign%20up.png" alt="Citizen Sign Up - Mobile" width="250">
+<table>
+  <tr>
+    <td align="center"><b>Login</b><br><img src="sipat-frontend/public/login.png" alt="Login" width="450"></td>
+    <td align="center"><b>Agency Sign Up</b><br><img src="sipat-frontend/public/agencysignup.png" alt="Agency Sign Up" width="450"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Citizen Sign Up (Mobile)</b><br><img src="sipat-frontend/public/citizen%20sign%20up.png" alt="Citizen Sign Up - Mobile" width="250"></td>
+    <td><!-- Empty cell for spacing --></td>
+  </tr>
+</table>
 
 ### 🏛️ Admin Dashboard
-<img src="sipat-frontend/public/web_admin.jpg" alt="Admin Dashboard" width="500">
-<img src="sipat-frontend/public/adminlogs.png" alt="Admin Logs" width="500">
-<img src="sipat-frontend/public/adminuser.png" alt="Admin User Management" width="500">
-<img src="sipat-frontend/public/manageproj.png" alt="Manage Projects" width="500">
+<table>
+  <tr>
+    <td align="center"><b>Admin Dashboard</b><br><img src="sipat-frontend/public/web_admin.jpg" alt="Admin Dashboard" width="450"></td>
+    <td align="center"><b>Admin Logs</b><br><img src="sipat-frontend/public/adminlogs.png" alt="Admin Logs" width="450"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Admin User Management</b><br><img src="sipat-frontend/public/adminuser.png" alt="Admin User Management" width="450"></td>
+    <td align="center"><b>Manage Projects</b><br><img src="sipat-frontend/public/manageproj.png" alt="Manage Projects" width="450"></td>
+  </tr>
+</table>
 
 ### 🏢 Agency Dashboard
-<img src="sipat-frontend/public/web_agency.jpg" alt="Agency Dashboard" width="500">
-<img src="sipat-frontend/public/agencyanalysis.png" alt="Agency Analysis" width="500">
-<img src="sipat-frontend/public/agencyuploadproject.png" alt="Agency Upload Project" width="500">
-<img src="sipat-frontend/public/agencymanageprj.png" alt="Agency Manage Projects" width="500">
-<img src="sipat-frontend/public/agencyfeedback.png" alt="Agency Feedback" width="500">
-<img src="sipat-frontend/public/agencyprofile.png" alt="Agency Profile" width="500">
+<table>
+  <tr>
+    <td align="center"><b>Agency Dashboard</b><br><img src="sipat-frontend/public/web_agency.jpg" alt="Agency Dashboard" width="450"></td>
+    <td align="center"><b>Agency Analysis</b><br><img src="sipat-frontend/public/agencyanalysis.png" alt="Agency Analysis" width="450"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Agency Upload Project</b><br><img src="sipat-frontend/public/agencyuploadproject.png" alt="Agency Upload Project" width="450"></td>
+    <td align="center"><b>Agency Manage Projects</b><br><img src="sipat-frontend/public/agencymanageprj.png" alt="Agency Manage Projects" width="450"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Agency Feedback</b><br><img src="sipat-frontend/public/agencyfeedback.png" alt="Agency Feedback" width="450"></td>
+    <td align="center"><b>Agency Profile</b><br><img src="sipat-frontend/public/agencyprofile.png" alt="Agency Profile" width="450"></td>
+  </tr>
+</table>
 
 ### 📱 Citizen View — Mobile
-<img src="sipat-frontend/public/mobile_citizen.jpg" alt="Citizen Mobile View" width="250">
-<img src="sipat-frontend/public/citizenexplore.png" alt="Citizen Explore" width="250">
-<img src="sipat-frontend/public/citizencategories.png" alt="Citizen Categories" width="250">
-<img src="sipat-frontend/public/citizenprojectview.png" alt="Citizen Project View" width="250">
-<img src="sipat-frontend/public/citizensaved.png" alt="Citizen Saved Projects" width="250">
-<img src="sipat-frontend/public/citizenprofile.png" alt="Citizen Profile" width="250">
+<table>
+  <tr>
+    <td align="center"><b>Citizen Mobile View</b><br><img src="sipat-frontend/public/mobile_citizen.jpg" alt="Citizen Mobile View" width="250"></td>
+    <td align="center"><b>Citizen Explore</b><br><img src="sipat-frontend/public/citizenexplore.png" alt="Citizen Explore" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Citizen Categories</b><br><img src="sipat-frontend/public/citizencategories.png" alt="Citizen Categories" width="250"></td>
+    <td align="center"><b>Citizen Project View</b><br><img src="sipat-frontend/public/citizenprojectview.png" alt="Citizen Project View" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Citizen Saved Projects</b><br><img src="sipat-frontend/public/citizensaved.png" alt="Citizen Saved Projects" width="250"></td>
+    <td align="center"><b>Citizen Profile</b><br><img src="sipat-frontend/public/citizenprofile.png" alt="Citizen Profile" width="250"></td>
+  </tr>
+</table>
 ---
 
 ## ✨ Core Features
