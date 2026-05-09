@@ -115,12 +115,10 @@ Municipal data — where your taxes go, what projects are planned in your neighb
   <tr>
     <td align="center"><b>Citizen Mobile View</b><br><img src="sipat-frontend/public/mobile_citizen.jpg" alt="Citizen Mobile View" width="250"></td>
     <td align="center"><b>Citizen Explore</b><br><img src="sipat-frontend/public/citizenexplore.png" alt="Citizen Explore" width="250"></td>
-  </tr>
-  <tr>
     <td align="center"><b>Citizen Categories</b><br><img src="sipat-frontend/public/citizencategories.png" alt="Citizen Categories" width="250"></td>
-    <td align="center"><b>Citizen Project View</b><br><img src="sipat-frontend/public/citizenprojectview.png" alt="Citizen Project View" width="250"></td>
   </tr>
   <tr>
+    <td align="center"><b>Citizen Project View</b><br><img src="sipat-frontend/public/citizenprojectview.png" alt="Citizen Project View" width="250"></td>
     <td align="center"><b>Citizen Saved Projects</b><br><img src="sipat-frontend/public/citizensaved.png" alt="Citizen Saved Projects" width="250"></td>
     <td align="center"><b>Citizen Profile</b><br><img src="sipat-frontend/public/citizenprofile.png" alt="Citizen Profile" width="250"></td>
   </tr>
