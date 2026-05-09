@@ -66,19 +66,36 @@ Municipal data — where your taxes go, what projects are planned in your neighb
 **Sipat changes that.** By treating the citizen as a premium user, we make civic engagement not just accessible, but genuinely desirable.
 
 ---
-
 ## 📸 Screenshots
 
 > Sipat supports **dark mode** out of the box and is fully optimized for **mobile access** — so citizens can check on their community anytime, anywhere.
 
+### 🔐 Authentication
+![Login](sipat-frontend/public/login.png)
+![Citizen Sign Up](sipat-frontend/public/citizen%20sign%20up.png)
+![Agency Sign Up](sipat-frontend/public/agencysignup.png)
+
 ### 🏛️ Admin Dashboard
 ![Admin Dashboard](sipat-frontend/public/web_admin.jpg)
+![Admin Logs](sipat-frontend/public/adminlogs.png)
+![Admin User Management](sipat-frontend/public/adminuser.png)
+![Manage Projects](sipat-frontend/public/manageproj.png)
 
 ### 🏢 Agency Dashboard
 ![Agency Dashboard](sipat-frontend/public/web_agency.jpg)
+![Agency Analysis](sipat-frontend/public/agencyanalysis.png)
+![Agency Upload Project](sipat-frontend/public/agencyuploadproject.png)
+![Agency Manage Projects](sipat-frontend/public/agencymanageprj.png)
+![Agency Feedback](sipat-frontend/public/agencyfeedback.png)
+![Agency Profile](sipat-frontend/public/agencyprofile.png)
 
 ### 📱 Citizen View — Mobile
 ![Citizen Mobile View](sipat-frontend/public/mobile_citizen.jpg)
+![Citizen Explore](sipat-frontend/public/citizenexplore.png)
+![Citizen Categories](sipat-frontend/public/citizencategories.png)
+![Citizen Project View](sipat-frontend/public/citizenprojectview.png)
+![Citizen Saved Projects](sipat-frontend/public/citizensaved.png)
+![Citizen Profile](sipat-frontend/public/citizenprofile.png)
 
 ---
 
