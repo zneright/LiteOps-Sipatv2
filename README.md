@@ -71,32 +71,32 @@ Municipal data — where your taxes go, what projects are planned in your neighb
 > Sipat supports **dark mode** out of the box and is fully optimized for **mobile access** — so citizens can check on their community anytime, anywhere.
 
 ### 🔐 Authentication
-![Login](sipat-frontend/public/login.png)
-![Citizen Sign Up](sipat-frontend/public/citizen%20sign%20up.png)
-![Agency Sign Up](sipat-frontend/public/agencysignup.png)
+<!-- Note: Citizen Sign Up is sized as a mobile view -->
+<img src="sipat-frontend/public/login.png" alt="Login" width="500">
+<img src="sipat-frontend/public/agencysignup.png" alt="Agency Sign Up" width="500">
+<img src="sipat-frontend/public/citizen%20sign%20up.png" alt="Citizen Sign Up - Mobile" width="250">
 
 ### 🏛️ Admin Dashboard
-![Admin Dashboard](sipat-frontend/public/web_admin.jpg)
-![Admin Logs](sipat-frontend/public/adminlogs.png)
-![Admin User Management](sipat-frontend/public/adminuser.png)
-![Manage Projects](sipat-frontend/public/manageproj.png)
+<img src="sipat-frontend/public/web_admin.jpg" alt="Admin Dashboard" width="500">
+<img src="sipat-frontend/public/adminlogs.png" alt="Admin Logs" width="500">
+<img src="sipat-frontend/public/adminuser.png" alt="Admin User Management" width="500">
+<img src="sipat-frontend/public/manageproj.png" alt="Manage Projects" width="500">
 
 ### 🏢 Agency Dashboard
-![Agency Dashboard](sipat-frontend/public/web_agency.jpg)
-![Agency Analysis](sipat-frontend/public/agencyanalysis.png)
-![Agency Upload Project](sipat-frontend/public/agencyuploadproject.png)
-![Agency Manage Projects](sipat-frontend/public/agencymanageprj.png)
-![Agency Feedback](sipat-frontend/public/agencyfeedback.png)
-![Agency Profile](sipat-frontend/public/agencyprofile.png)
+<img src="sipat-frontend/public/web_agency.jpg" alt="Agency Dashboard" width="500">
+<img src="sipat-frontend/public/agencyanalysis.png" alt="Agency Analysis" width="500">
+<img src="sipat-frontend/public/agencyuploadproject.png" alt="Agency Upload Project" width="500">
+<img src="sipat-frontend/public/agencymanageprj.png" alt="Agency Manage Projects" width="500">
+<img src="sipat-frontend/public/agencyfeedback.png" alt="Agency Feedback" width="500">
+<img src="sipat-frontend/public/agencyprofile.png" alt="Agency Profile" width="500">
 
 ### 📱 Citizen View — Mobile
-![Citizen Mobile View](sipat-frontend/public/mobile_citizen.jpg)
-![Citizen Explore](sipat-frontend/public/citizenexplore.png)
-![Citizen Categories](sipat-frontend/public/citizencategories.png)
-![Citizen Project View](sipat-frontend/public/citizenprojectview.png)
-![Citizen Saved Projects](sipat-frontend/public/citizensaved.png)
-![Citizen Profile](sipat-frontend/public/citizenprofile.png)
-
+<img src="sipat-frontend/public/mobile_citizen.jpg" alt="Citizen Mobile View" width="250">
+<img src="sipat-frontend/public/citizenexplore.png" alt="Citizen Explore" width="250">
+<img src="sipat-frontend/public/citizencategories.png" alt="Citizen Categories" width="250">
+<img src="sipat-frontend/public/citizenprojectview.png" alt="Citizen Project View" width="250">
+<img src="sipat-frontend/public/citizensaved.png" alt="Citizen Saved Projects" width="250">
+<img src="sipat-frontend/public/citizenprofile.png" alt="Citizen Profile" width="250">
 ---
 
 ## ✨ Core Features
